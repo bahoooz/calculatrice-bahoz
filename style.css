@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 50px;
+    color: white;
+}
+
+h1:hover {
+    text-decoration: underline;
+}
+
+.calculatrice {
+    border: 3px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    max-width: calc(4*75px + 10px + 2px);
+    overflow: hidden;
+}
+
+.ecran {
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 40px;
+    color: #38617D;
+}
+
+.contenu-ecran {
+    width: 90%;
+    height: 80%;
+    background: #d4d4ff;
+    margin-top: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.touches {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: repeat(5, 75px);
+    grid-gap: 2px;
+}
+
+button {
+    background: #F4F6FF;
+    color: #38617D;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.05);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.color-1 {
+    background: #afadff;
+}
+
+.color-2 {
+    background: #d4d4ff;
+}
+
+button[data-key="13"] {
+    grid-column: span 2;
+    border-radius: 0 0 20px 0;
+}
+
+button[data-key="96"] {
+    border-radius: 0 0 0 20px;
+}
+
+@media (max-width: 599px) {
+    h1 {
+        position: absolute;
+        transform: translate(-50%);
+        font-size: 32px;
+        color: white;
+        left: 50%;
+        min-width: fit-content;
+        bottom: 10px;
+    }
+}
